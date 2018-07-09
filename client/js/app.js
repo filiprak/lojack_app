@@ -134,8 +134,8 @@ function display_modal(title, message, errors) {
 function is_correct_latlng(latlng) {
 
     try {
-        const lat = parseFloat(latlng['0']);
-        const lng = parseFloat(latlng['1']);
+        const lat = Number(latlng['0']);
+        const lng = Number(latlng['1']);
 
         return (!isNaN(lng) && !isNaN(lat) && lat >= -90 && lat <= 90 && lng <= 180 && lng >= -180);
     } catch (e) {
