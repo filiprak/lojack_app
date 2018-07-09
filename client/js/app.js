@@ -134,6 +134,8 @@ function display_modal(title, message, errors) {
 function is_correct_latlng(latlng) {
 
     try {
+	if (latlng['0'] === "" || latlng['1'] === "") return false;
+
         const lat = Number(latlng['0']);
         const lng = Number(latlng['1']);
 
